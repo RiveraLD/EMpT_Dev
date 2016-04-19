@@ -12,14 +12,14 @@
             position:relative;
             bottom:0;
             width:100%;
-            min-height:400px;
+            min-height:150px;
             background-color:gray;
         }
     </style>
 </head>
 <body>
     <form id="form" runat="server" data-toggle="validator" role="form">
-    <div class="container" style="min-height:800px">
+    <div class="container-fluid" style="min-height:800px">
         <div style="margin-top:50px; width:75% " class="text-center center-block alert alert-info">                            
             <p>
                 <b>¡Gracias por tu interes en ser parte de nuestra red de empresas!</b><br />
@@ -65,11 +65,15 @@
                     <span class="input-group-addon" title="Confirmar contraseña requerida"><strong>R</strong></span>
                 </div>                
             </div>
-            <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Cuenta" CssClass="btn btn-primary center-block" />
+            <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Mi Cuenta" CssClass="btn btn-primary center-block" />
         </div>      
     </div>
-    <div class="footer">
-        asd
+    <div class="footer" style="margin-top:100px;">
+        <div style="height:45px" ></div>
+        <div style="height:45px"></div>
+        <div class="text-center" style=" height:45px;">
+            <small><strong>@2016 Rivera Technology Group. All Rights Reserved.</strong></small>
+        </div>
     </div>         
     </form>        
     <script src="Scripts/jquery-1.9.1.min.js"></script>

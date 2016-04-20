@@ -20,7 +20,7 @@
 <body>
     <form id="form" runat="server" data-toggle="validator" role="form">
     <div class="container-fluid" style="min-height:800px">
-        <div style="margin-top:50px; width:75% " class="text-center center-block alert alert-info">                            
+        <div style="margin-top:50px; width:75% " class="text-center center-block alert alert-info">   
             <p>
                 <b>¡Gracias por tu interes en ser parte de nuestra red de empresas!</b><br />
                 Por favor, ingresa todos los datos que se te piden en la forma
@@ -55,18 +55,23 @@
             </div>
             <div class="form-group" >
                 <div class="input-group">
-                    <asp:TextBox ID="password" runat="server" CssClass="form-control" required AutoCompleteType="Disabled" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
+                    <asp:TextBox ID="password" runat="server" CssClass="form-control" name="password" required AutoCompleteType="Disabled" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
                     <span class="input-group-addon" title="Contraseña requerida"><strong>R</strong></span>
                 </div>                
             </div>
             <div class="form-group" >
                 <div class="input-group">
-                    <asp:TextBox ID="cPassword" runat="server" CssClass="form-control" required AutoCompleteType="Disabled" TextMode="Password" placeholder="Confirmar contraseña"></asp:TextBox>
+                    <asp:TextBox ID="cPassword" runat="server" CssClass="form-control" name="confirmPassword" required AutoCompleteType="Disabled" TextMode="Password" placeholder="Confirmar contraseña"></asp:TextBox>
                     <span class="input-group-addon" title="Confirmar contraseña requerida"><strong>R</strong></span>
                 </div>                
             </div>
-            <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Mi Cuenta" CssClass="btn btn-primary center-block" />
-        </div>      
+            <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Mi Cuenta" CssClass="btn btn-primary center-block" OnClick="btnCreateAccount_Click" />
+        </div>
+        <asp:Panel ID="errorPanel" runat="server" Visible="false">
+            <div class="alert alert-danger text-center center-block" style="margin-top:20px; width:50%">
+                <asp:Label ID="errorLbl" runat="server"></asp:Label>
+            </div>
+        </asp:Panel>      
     </div>
     <div class="footer" style="margin-top:100px;">
         <div style="height:45px" ></div>
@@ -78,5 +83,29 @@
     </form>        
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#form').formValidation({
+                framework: 'bootstrap',
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    confirmPassword: {
+                        validators: {
+                            identical: {
+                                field: 'password',
+                                message: 'The password and its confirm are not the same'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>

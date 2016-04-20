@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/createAccount.aspx">Crear cuenta</asp:LinkButton>
     </div>
     </form>
 </body>

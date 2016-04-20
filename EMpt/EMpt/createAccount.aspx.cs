@@ -11,7 +11,21 @@ namespace EMpt
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+              
+        }
 
+        protected void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                Response.Redirect("~/messageSplash.html");
+            }
+            catch (Exception ex)
+            {
+                errorLbl.Text = ex.Message.ToString();
+            }
+            
         }
     }
 }

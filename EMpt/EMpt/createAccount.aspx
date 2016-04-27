@@ -26,8 +26,9 @@
                 Por favor, ingresa todos los datos que se te piden en la forma
             </p>
             <br />
-            <span><small><strong>R</strong> = Denota campo requerido</small></span>            
+            <span><small><strong>R</strong> = Denota campo requerido</small></span>                                
         </div>
+        
         <div style="width:25%; margin:auto; margin-top:25px;">
             <div class="form-group has-feedback" >
                 <div class="input-group">
@@ -67,6 +68,9 @@
                 <div class="text-center" style="margin-top:25px; margin-bottom:20px">
                     <asp:CompareValidator ID="CompareValidator1" CssClass="alert alert-warning" runat="server" ErrorMessage="<b>Error</b>: Contraseñas no son iguales." ControlToCompare="password" ControlToValidate="cPassword" ValidationGroup="checkPsw"></asp:CompareValidator>
                 </div>              
+                <%--<div class="text-center" style="margin-top:50px; margin-bottom:40px">
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" CssClass="alert alert-warning" runat="server" ErrorMessage="<b>Atencion</b>:Contraseña no es valida" ValidationExpression="^[a-zA-Z0-9'@&#^]{8,12}$" ControlToValidate="cPassword" ValidationGroup="checkPsw"></asp:RegularExpressionValidator>
+                </div>--%>
             </div>
             <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Mi Cuenta" CssClass="btn btn-primary center-block" OnClick="btnCreateAccount_Click" ValidationGroup="checkPsw" CausesValidation="true" />
         </div>

@@ -31,13 +31,13 @@
         <div style="width:25%; margin:auto; margin-top:25px;">
             <div class="form-group has-feedback" >
                 <div class="input-group">
-                    <asp:TextBox ID="names" runat="server" CssClass="form-control text-capitalize text-primary" required AutoCompleteType="Disabled" placeholder="Nombre(s)"></asp:TextBox>
+                    <asp:TextBox ID="names" runat="server" CssClass="form-control text-capitalize text-primary" required AutoCompleteType="Disabled" placeholder="Nombre(s)" MaxLength="10"></asp:TextBox>
                     <span class="input-group-addon" title="Nombre(s) requerido"><strong>R</strong></span>
                 </div>                              
             </div>
             <div class="form-group" >
                 <div class="input-group">
-                    <asp:TextBox ID="lastName" runat="server" CssClass="form-control text-capitalize text-primary" required AutoCompleteType="Disabled" placeholder="Apellido Paterno"></asp:TextBox>
+                    <asp:TextBox ID="lastName" runat="server" CssClass="form-control text-capitalize text-primary" required AutoCompleteType="Disabled" placeholder="Apellido Paterno" MaxLength="15"></asp:TextBox>
                     <span class="input-group-addon" title="Apellido requerido"><strong>R</strong></span>
                 </div>                
             </div>
@@ -62,14 +62,17 @@
             <div class="form-group" >
                 <div class="input-group">
                     <asp:TextBox ID="cPassword" runat="server" CssClass="form-control" name="confirmPassword" required AutoCompleteType="Disabled" TextMode="Password" placeholder="Confirmar contraseña"></asp:TextBox>
-                    <span class="input-group-addon" title="Confirmar contraseña requerida"><strong>R</strong></span>
-                </div>                
+                    <span class="input-group-addon" title="Confirmar contraseña requerida"><strong>R</strong></span>                    
+                </div>  
+                <div class="text-center" style="margin-top:25px; margin-bottom:20px">
+                    <asp:CompareValidator ID="CompareValidator1" CssClass="alert alert-warning" runat="server" ErrorMessage="<b>Error</b>: Contraseñas no son iguales." ControlToCompare="password" ControlToValidate="cPassword" ValidationGroup="checkPsw"></asp:CompareValidator>
+                </div>              
             </div>
-            <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Mi Cuenta" CssClass="btn btn-primary center-block" OnClick="btnCreateAccount_Click" />
+            <asp:Button ID="btnCreateAccount" runat="server" Text="Crear Mi Cuenta" CssClass="btn btn-primary center-block" OnClick="btnCreateAccount_Click" ValidationGroup="checkPsw" CausesValidation="true" />
         </div>
         <asp:Panel ID="errorPanel" runat="server" Visible="false">
             <div class="alert alert-danger text-center center-block" style="margin-top:20px; width:50%">
-                <asp:Label ID="errorLbl" runat="server"></asp:Label>
+                <asp:Label ID="errorLbl" runat="server"></asp:Label>                
             </div>
         </asp:Panel>      
     </div>
@@ -77,7 +80,11 @@
         <div style="height:45px" ></div>
         <div style="height:45px"></div>
         <div class="text-center" style=" height:45px;">
+            <small><strong><a href="http://www.riveratg.com" style="color:white">www.riveratg.com</a> - Tu socio en tecnologia</strong></small>
+            <br />
             <small><strong>@2016 Rivera Technology Group. All Rights Reserved.</strong></small>
+            <br />
+            <small><strong>El Paso, Texas</strong></small>
         </div>
     </div>         
     </form>        

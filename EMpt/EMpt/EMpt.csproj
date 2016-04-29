@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminPortal.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -91,6 +92,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminPortal.aspx.cs">
+      <DependentUpon>adminPortal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminPortal.aspx.designer.cs">
+      <DependentUpon>adminPortal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="createAccount.aspx.cs">
       <DependentUpon>createAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

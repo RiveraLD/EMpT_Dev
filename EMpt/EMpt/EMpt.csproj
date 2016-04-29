@@ -57,7 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="adminMain.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -65,7 +64,6 @@
     <Content Include="Content\sticky-footer-navbar.css" />
     <Content Include="createAccount.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="individualProfile.aspx" />
     <Content Include="login.aspx" />
     <Content Include="messageSplash.html" />
     <Content Include="packages.config" />
@@ -77,7 +75,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="layout.Master" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -92,33 +89,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminMain.aspx.cs">
-      <DependentUpon>adminMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminMain.aspx.designer.cs">
-      <DependentUpon>adminMain.aspx</DependentUpon>
-    </Compile>
     <Compile Include="createAccount.aspx.cs">
       <DependentUpon>createAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="createAccount.aspx.designer.cs">
       <DependentUpon>createAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="individualProfile.aspx.cs">
-      <DependentUpon>individualProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="individualProfile.aspx.designer.cs">
-      <DependentUpon>individualProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="layout.Master.cs">
-      <DependentUpon>layout.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="layout.Master.designer.cs">
-      <DependentUpon>layout.Master</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

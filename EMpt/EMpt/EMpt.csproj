@@ -65,7 +65,6 @@
     <Content Include="Content\sticky-footer-navbar.css" />
     <Content Include="createAccount.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="individualProfile.aspx" />
     <Content Include="login.aspx" />
     <Content Include="messageSplash.html" />
     <Content Include="packages.config" />
@@ -105,13 +104,6 @@
     </Compile>
     <Compile Include="createAccount.aspx.designer.cs">
       <DependentUpon>createAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="individualProfile.aspx.cs">
-      <DependentUpon>individualProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="individualProfile.aspx.designer.cs">
-      <DependentUpon>individualProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
